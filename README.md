@@ -5,7 +5,7 @@
 - `index.html` — sahifa tuzilishi, matnlar va havolalar.
 - `assets/css/style.css` — ranglar, shrift o‘lchamlari va telefonlarga moslashuv.
 - `assets/images/avatar.jpg` — profil rasmi.
-- `assets/fonts/` — Pacifico va Onest shriftlari, ularning litsenziyalari.
+- `assets/fonts/` — Alex Brush va Onest shriftlari, ularning litsenziyalari.
 
 ## Ishga tushirish
 
@@ -42,5 +42,4 @@ Kichik ekranlarda sahifa ixchamlashadi. Xarita bo‘limi ochilganda, katta matn 
 
 ## Shriftlar
 
-Pacifico va Onest: Google Fonts, SIL Open Font License. Litsenziyalar `assets/fonts` ichida.
-# sapfir.stilist
+Alex Brush va Onest: Google Fonts, SIL Open Font License. Litsenziyalar `assets/fonts` ichida.

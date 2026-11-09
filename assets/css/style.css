@@ -1,10 +1,10 @@
-/* Pacifico — плотный рукописный шрифт для крупного имени. */
+/* Alex Brush — плотный рукописный шрифт для крупного имени. */
 @font-face {
-  font-family: 'Pacifico';
+  font-family: 'Alex Brush';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/pacifico-400.ttf') format('truetype');
+  src: url(../fonts/alex-brush-400.ttf) format('truetype');
 }
 
 /* Шрифты встроены: работают без подключения к интернету. */
@@ -29,7 +29,7 @@
 .page{width:100%;min-width:0;max-width:420px;margin:auto;padding:14px 6px 18px}header{text-align:center;padding:0 0 34px}.portrait{width:124px;height:124px;padding:5px;border:1px solid #72665e;border-radius:50%;margin:0 auto 22px}.portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 35%;border-radius:50%;filter:saturate(.8)}
 /* Размер имени плавно уменьшается на узких экранах. */
 /* Имя и профессия — отдельные блоки, чтобы росчерки букв не перекрывали подпись. */
-h1{font-family:Pacifico,cursive;font-size:clamp(64px,19vw,80px);font-style:normal;font-weight:400;font-synthesis:none;line-height:1.65;letter-spacing:-1px;text-transform:none;margin:0;padding:0 10px 14px;color:#f2e9e2;text-shadow:none}.profession{margin:8px 0 16px;padding-left:.45em;color:#c2a5b1;font:400 9px/1.8 Onest,Arial,sans-serif;letter-spacing:.45em;text-transform:uppercase}.subtitle a{transition:color .2s}.subtitle a:hover{color:var(--text);text-decoration:underline;text-underline-offset:4px}.subtitle{font-size:12px;line-height:1.6;letter-spacing:.3px;color:var(--muted);margin:0}
+h1{font-family:'Alex Brush',cursive;font-size:clamp(78px,23vw,100px);font-style:normal;font-weight:400;font-synthesis:none;line-height:1.45;letter-spacing:0;text-transform:none;margin:0;padding:0 10px 14px;color:#f2e9e2;text-shadow:none}.profession{margin:8px 0 16px;padding-left:.45em;color:#c2a5b1;font:400 9px/1.8 Onest,Arial,sans-serif;letter-spacing:.45em;text-transform:uppercase}.subtitle a{transition:color .2s}.subtitle a:hover{color:var(--text);text-decoration:underline;text-underline-offset:4px}.subtitle{font-size:12px;line-height:1.6;letter-spacing:.3px;color:var(--muted);margin:0}
 /* КОНТАКТЫ: три одинаковых горизонтальных ряда. */
 .links{display:flex;flex-direction:column;gap:12px}
 .link,summary{display:flex;align-items:center;gap:16px;min-height:88px;padding:19px 20px;color:var(--text);background:linear-gradient(115deg,#201c1e,#171618);border:1px solid #403438;border-radius:16px;transition:background .22s,border-color .22s,transform .22s}
@@ -60,7 +60,7 @@ details[open] .plus{transform:rotate(45deg)}
  .page{max-width:400px;padding:0}
  header{padding:0 0 22px}
  .portrait{width:clamp(86px,15svh,116px);height:clamp(86px,15svh,116px);margin-bottom:12px;padding:4px}
- h1{font-size:clamp(58px,17vw,72px);line-height:1.6;padding:0 8px 6px}
+ h1{font-size:clamp(74px,22vw,92px);line-height:1.45;padding:0 8px 6px}
  .profession{margin:4px 0 10px;line-height:1.6}
  .subtitle{font-size:12px;line-height:1.5}
  .links{gap:10px}
@@ -76,7 +76,7 @@ details[open] .plus{transform:rotate(45deg)}
  body{padding-top:max(12px,env(safe-area-inset-top));padding-bottom:max(12px,env(safe-area-inset-bottom))}
  header{padding-bottom:18px}
  .portrait{width:80px;height:80px;margin-bottom:8px}
- h1{font-size:58px;line-height:1.6;padding-bottom:5px}
+ h1{font-size:74px;line-height:1.45;padding-bottom:5px}
  .profession{margin:2px 0 8px}
  .link,summary{min-height:71px;padding:12px 14px}
  .links{gap:9px}
