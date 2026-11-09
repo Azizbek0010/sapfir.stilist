@@ -1,0 +1,93 @@
+/* Pacifico — плотный рукописный шрифт для крупного имени. */
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/pacifico-400.ttf') format('truetype');
+}
+
+/* Шрифты встроены: работают без подключения к интернету. */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/onest-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/onest-500.ttf') format('truetype');
+}
+/* ПАЛИТРА: фон, текст и цвет клавиатурного фокуса. */
+:root{--bg:#0c0c0d;--text:#f2eee8;--muted:#aaa5a0;--accent:#ded3c8}
+*{box-sizing:border-box}html{background:var(--bg);-webkit-text-size-adjust:100%;text-size-adjust:100%}body{margin:0;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:36px 22px;color:var(--text);font-family:Onest,Arial,sans-serif;background:radial-gradient(ellipse at 50% 0%,#2b23232b,transparent 65%),var(--bg);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a,summary{-webkit-tap-highlight-color:transparent}a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+/* На ПК — узкая центральная композиция. Без внешней рамки и лишних блоков. */
+.page{width:100%;min-width:0;max-width:420px;margin:auto;padding:14px 6px 18px}header{text-align:center;padding:0 0 34px}.portrait{width:124px;height:124px;padding:5px;border:1px solid #72665e;border-radius:50%;margin:0 auto 22px}.portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 35%;border-radius:50%;filter:saturate(.8)}
+/* Размер имени плавно уменьшается на узких экранах. */
+/* Имя и профессия — отдельные блоки, чтобы росчерки букв не перекрывали подпись. */
+h1{font-family:Pacifico,cursive;font-size:clamp(64px,19vw,80px);font-style:normal;font-weight:400;font-synthesis:none;line-height:1.65;letter-spacing:-1px;text-transform:none;margin:0;padding:0 10px 14px;color:#f2e9e2;text-shadow:none}.profession{margin:8px 0 16px;padding-left:.45em;color:#c2a5b1;font:400 9px/1.8 Onest,Arial,sans-serif;letter-spacing:.45em;text-transform:uppercase}.subtitle a{transition:color .2s}.subtitle a:hover{color:var(--text);text-decoration:underline;text-underline-offset:4px}.subtitle{font-size:12px;line-height:1.6;letter-spacing:.3px;color:var(--muted);margin:0}
+/* КОНТАКТЫ: три одинаковых горизонтальных ряда. */
+.links{display:flex;flex-direction:column;gap:12px}
+.link,summary{display:flex;align-items:center;gap:16px;min-height:88px;padding:19px 20px;color:var(--text);background:linear-gradient(115deg,#201c1e,#171618);border:1px solid #403438;border-radius:16px;transition:background .22s,border-color .22s,transform .22s}
+.link:hover,summary:hover{background:#2a2025;border-color:#9a697c;transform:translateY(-2px)}
+.primary{background:linear-gradient(115deg,#292827,#1c1c1c);border-color:#625a51;color:#f4f0eb}
+.primary:hover{background:linear-gradient(115deg,#35322e,#242322);border-color:#b3a28f}
+.number{display:grid;place-items:center;flex-shrink:0;width:42px;height:42px;border-radius:12px;background:#ffffff05;border:1px solid #ffffff0c;color:#d6b8c5}
+.number svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.label{flex:1;min-width:0;font:500 17px/1.3 Onest,Arial,sans-serif;letter-spacing:-.35px;margin:0}
+.label small{display:block;margin-top:5px;color:#b7a7af;font:400 11px/1.6 Onest,Arial,sans-serif;letter-spacing:0}
+/* Кнопка звонка: графит и приглушённый шампань. */
+.primary .label small{color:#c4bcb2}
+.primary .number{color:#ddcbb6;background:#ddcbb609;border-color:#ddcbb61f}
+.primary .arrow{color:#ddcbb6}
+.arrow,.plus{display:grid;place-items:center;flex-shrink:0;width:25px;height:28px;color:#d4b1c0;font:400 23px/1 Onest,sans-serif;transition:transform .22s}
+.link:hover .arrow{transform:translate(2px,-2px)}
+.links>details{border:0;background:transparent}
+summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}
+details[open] summary{border-radius:16px 16px 0 0;transform:none}
+details[open] .plus{transform:rotate(45deg)}
+.maps{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:12px;border:1px solid #403438;border-top:0;border-radius:0 0 16px 16px;background:#191519}
+.maps a{display:flex;align-items:center;justify-content:space-between;gap:5px;padding:13px 11px;border:1px solid #4c3642;border-radius:9px;background:#282027;color:#dfcbd4;font:400 11px/1.5 Onest,Arial,sans-serif;transition:background .2s,border-color .2s}
+.maps a:hover{background:#3c2834;border-color:#9b6c83}
+/* ТЕЛЕФОНЫ: безопасные отступы для выреза iPhone и нижнего индикатора.
+Никакой фиксированной высоты: при увеличении текста или открытии карт доступна прокрутка. */
+@media(max-width:600px){
+ body{padding:18px 20px;padding-top:max(18px,env(safe-area-inset-top));padding-right:max(20px,env(safe-area-inset-right));padding-bottom:max(18px,env(safe-area-inset-bottom));padding-left:max(20px,env(safe-area-inset-left))}
+ .page{max-width:400px;padding:0}
+ header{padding:0 0 22px}
+ .portrait{width:clamp(86px,15svh,116px);height:clamp(86px,15svh,116px);margin-bottom:12px;padding:4px}
+ h1{font-size:clamp(58px,17vw,72px);line-height:1.6;padding:0 8px 6px}
+ .profession{margin:4px 0 10px;line-height:1.6}
+ .subtitle{font-size:12px;line-height:1.5}
+ .links{gap:10px}
+ .link,summary{min-height:76px;padding:14px 16px;gap:13px}
+ .number{width:39px;height:39px}
+ .label{font-size:16px}
+ .label small{font-size:11px;line-height:1.5;margin-top:4px}
+ .maps{grid-template-columns:repeat(2,minmax(0,1fr));padding:10px;gap:8px}
+ .maps a{min-height:44px;padding:11px 9px;font-size:11px}
+}
+/* Короткие экраны, включая iPhone SE и Android с панелями браузера. */
+@media(max-width:600px) and (max-height:700px){
+ body{padding-top:max(12px,env(safe-area-inset-top));padding-bottom:max(12px,env(safe-area-inset-bottom))}
+ header{padding-bottom:18px}
+ .portrait{width:80px;height:80px;margin-bottom:8px}
+ h1{font-size:58px;line-height:1.6;padding-bottom:5px}
+ .profession{margin:2px 0 8px}
+ .link,summary{min-height:71px;padding:12px 14px}
+ .links{gap:9px}
+ .number{width:36px;height:36px}
+}
+@media(max-width:350px){
+ body{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+ .link,summary{gap:10px;padding-left:12px;padding-right:12px}
+ .label{font-size:15px}.label small{font-size:10px}
+ .arrow,.plus{width:21px}.maps a{font-size:10px}
+}
+@media(orientation:landscape) and (max-height:500px){body{padding-top:max(16px,env(safe-area-inset-top));padding-bottom:max(16px,env(safe-area-inset-bottom))}.page{margin:auto}}
+@media(hover:none){.link:hover,summary:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
